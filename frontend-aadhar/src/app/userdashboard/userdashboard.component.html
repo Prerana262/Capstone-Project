@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="welcome">
+    <h2>Welcome to the User Dashboard, {{ user }}</h2>
+  </div>
+  <div id="servicediv" class="list-group">
+    <h2>Available Services for You</h2>
+    <a
+      routerLink="/applyforaadhar"
+      class="list-group-item list-group-item-action"
+      >Apply for New Aadhar Card</a
+    >
+    <a routerLink="/updateAadhar" class="list-group-item list-group-item-action"
+      >Update Aadhar</a
+    >
+    <a routerLink="/deleteAadhar" class="list-group-item list-group-item-action"
+      >Deletion of Aadhar</a
+    >
+    <a
+      routerLink="/duplicateaadhar"
+      class="list-group-item list-group-item-action"
+      (click)="showDuplicateAadhar()"
+      >Apply for Duplicate Aadhar</a
+    >
+  </div>
+</div>

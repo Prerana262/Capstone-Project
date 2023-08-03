@@ -1,0 +1,29 @@
+<h2>Admin Aadhar Verification</h2>
+<table>
+  <tr>
+    <th>CID</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Date of Birth</th>
+    <th>Email ID</th>
+    <th>Mobile Number</th>
+    <th>Verified</th>
+    <!-- Add other Aadhar details you want to display -->
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let aadhar of aadhars">
+    <td>{{ aadhar.cid }}</td>
+    <td>{{ aadhar.cname }}</td>
+    <td>{{ aadhar.address }}</td>
+    <td>{{ aadhar.dob }}</td>
+    <td>{{ aadhar.emailid }}</td>
+    <td>{{ aadhar.number }}</td>
+    <td>{{ aadhar.verified ? "Yes" : "No" }}</td>
+    <!-- Add other Aadhar details you want to display -->
+    <td>
+      <button (click)="verifyAadhar(aadhar)">
+        {{ aadhar.verified ? "Unverify" : "Verify" }}
+      </button>
+    </td>
+  </tr>
+</table>

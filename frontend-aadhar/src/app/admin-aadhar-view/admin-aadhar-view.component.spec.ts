@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { AdminAadharViewComponent } from './admin-aadhar-view.component';
+
+describe('AdminAadharViewComponent', () => {
+  let component: AdminAadharViewComponent;
+  let fixture: ComponentFixture<AdminAadharViewComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [AdminAadharViewComponent]
+    });
+    fixture = TestBed.createComponent(AdminAadharViewComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

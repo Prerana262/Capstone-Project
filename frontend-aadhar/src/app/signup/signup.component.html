@@ -1,0 +1,65 @@
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <div class="card p-4">
+        <h2 class="text-center mb-4">Account Create</h2>
+        <form [formGroup]="loginRef" (ngSubmit)="signUp()">
+          <div class="mb-3">
+            <label>EmailId</label>
+            <input
+              type="email"
+              formControlName="emailid"
+              class="form-control"
+            />
+          </div>
+          <div class="mb-3">
+            <label>Password</label>
+            <input
+              type="password"
+              formControlName="password"
+              class="form-control"
+            />
+          </div>
+          <div class="mb-3">
+            <label>TypeOfUser</label>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="typeOfUser"
+                value="admin"
+                formControlName="typeOfUser"
+                class="form-check-input"
+              />
+              <label for="admin" class="form-check-label">Admin</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="typeOfUser"
+                value="user"
+                formControlName="typeOfUser"
+                class="form-check-input"
+              />
+              <label for="user" class="form-check-label">User</label>
+            </div>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+            <button type="submit" class="btn btn-primary">
+              <a
+                routerLink="/login"
+                style="text-decoration: none"
+                class="btn btn-primary"
+                >Login</a
+              >
+            </button>
+          </div>
+        </form>
+        <div class="mt-3">
+          <span style="color: red" *ngIf="msg">{{ msg }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

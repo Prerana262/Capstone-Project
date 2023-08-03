@@ -1,0 +1,19 @@
+<div class="container mt-4">
+  <h2 class="text-center">Request to Delete Aadhar</h2>
+  <form (ngSubmit)="deleteAadhar(cid)">
+    <div class="form-group">
+      <label for="inputPassword6">Enter Aadhar Number</label>
+      <input
+        type="number"
+        name="cid"
+        [(ngModel)]="cid"
+        id="inputPassword6"
+        class="form-control"
+      />
+    </div>
+    <div class="d-grid gap-2">
+      <input type="button" value="Delete" class="btn btn-danger" (click)="deleteAadhar(cid)" />
+      <a routerLink="/userHome" class="btn btn-primary mt-3">Dashboard</a>
+    </div>
+  </form>
+</div>
